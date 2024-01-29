@@ -45,12 +45,13 @@ box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0
     justify-content: center;
     align-items: center;
 }
-.modal-close-btn:hover .model-close-icon,
-.modal-close-btn:focus .model-close-icon{
-    fill:#2196F3;
-}
+
 .model-close-icon{
     transition: fill var(--timing-function);
+    .modal-close-btn:hover &,
+.modal-close-btn:focus &{
+    fill:#2196F3;
+}
 }
 .modal-title {
     color: #212121;
@@ -89,21 +90,23 @@ background-color: transparent;
 
 padding-left: 42px;
 transition: border-color var(--timing-function);
-}
-
-.modal-input:focus{
+&:focus{
     border-color: #2196F3;
 }
+}
+
+
 .modal-icon {
     position: absolute;
     left: 12px;
     top: 50%;
     transform: translateY(-50%);
     transition: fill var(--timing-function);
+    .modal-input:focus + &{
+        fill: #2196F3;
+    }
 }
-.modal-input:focus + .modal-icon{
-    fill: #2196F3;
-}
+
 .textarea-fild {
     margin-bottom: 20px;
 }
@@ -119,8 +122,7 @@ background: transparent;
 resize: none;
 padding: 12px 16px;
 transition: border-color var(--timing-function);
-}
-.model-textarea::placeholder {
+&::placeholder {
     color: rgba(117, 117, 117, 0.50);
 
 font-size: 12px;
@@ -129,18 +131,17 @@ font-size: 12px;
 line-height: normal;
 letter-spacing: 0.01em;
 }
-.model-textarea:focus{
+&:focus{
     border-color: #2196F3;
 }
+}
+
+
 .check-fild {
     margin-bottom: 30px;
     margin-left: 12px;
 }
-.input-check:checked + .input-check-text > .check-box {
-    fill: #FFF;
-    background-color: #2196F3;
-    border: none;
-}
+
 
 .input-check-text {
     color: #757575;
@@ -160,6 +161,14 @@ letter-spacing: 0.03em;
     fill: transparent;
     margin-right: 8px;
     transition: fill var(--timing-function),  background-color var(--timing-function), border var(--timing-function) ;
+    .input-check:checked + .input-check-text > & {
+        fill: #FFF;
+        background-color: #2196F3;
+        border: none;
+    }
+    .input-check:focus + .input-check-text > & {
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    }
 }
 .check-box-icon {
 }
@@ -186,8 +195,8 @@ min-width: 200px;
 min-height: 50px;
 border: none;
 transition:background-color var(--timing-function) ;
-}
-.model-btn:hover,
-.model-btn:focus{
+&:hover,
+&:focus{
     background-color: #2196F3;
+}
 }

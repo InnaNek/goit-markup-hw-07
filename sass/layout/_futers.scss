@@ -1,33 +1,36 @@
-.futers-section{
+.futers__section {
     padding-bottom: 0;
 }
-.futers-list{
+
+.futers__list {
     display: flex;
     gap: 30px;
 }
 
-.futers-item{
-    width: calc((100% - 90px) / 4) ;
+.futers__item {
+    width: calc((100% - 90px) / 4);
 }
-.icon-wrap{
+
+.futers__icon-wrap {
     border-radius: 4px;
-background: #F5F4FA;
-height: 120px;
-display: flex;
-justify-content: center;
-margin-bottom: 30px;
-align-items: center;
+    background: #F5F4FA;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    align-items: center;
 }
-.fuetures-subtitle {
+
+.fuetures__subtitle {
 
     font-size: 14px;
-margin-bottom: 10px;
+    margin-bottom: 10px;
     line-height: normal;
     letter-spacing: 0.03em;
     text-transform: uppercase;
 }
 
-.fuetures-text {
+.fuetures__text {
     color: var(--secondary-text-color);
     line-height: 1.7;
     letter-spacing: 0.03em;

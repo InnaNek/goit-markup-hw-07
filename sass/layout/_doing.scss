@@ -1,11 +1,11 @@
-.doing-list{
+.doing__list{
     display: flex;
     gap: 30px;
 }
-.doing-item{
+.doing__item{
     position: relative;
 }
-.doing-text{
+.doing__text{
     position: absolute;
 
     left: 0;
